@@ -1,3 +1,4 @@
+import userRoutes from '@controllers/userController'
 import { runMigrations } from '@migrate'
 import { sequelize } from '@models'
 import bodyParser from 'body-parser'
@@ -7,6 +8,8 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.use(bodyParser.json())
+
+app.use('/users', userRoutes)
 
 async function start(): Promise<void> {
     try {
