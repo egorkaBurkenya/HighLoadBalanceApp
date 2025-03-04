@@ -3,10 +3,10 @@
 A simple web application built with Node.js, Express, and PostgreSQL (using Sequelize and Umzug) for high-load balance updates. The app supports atomic balance updates (both credit and debit) without explicit transaction-level locks. The project is written in TypeScript and demonstrates a clean project structure with controllers, services, migrations, models, middlewares, and validators.
 
 Features
-	•	Atomic Balance Updates: Updates balance atomically using a single SQL query with conditions.
-	•	REST API Endpoint: A POST endpoint to update user balances.
-	•	Database Migrations: Managed with Umzug.
-	•	Testing: Basic tests and load testing with Artillery.
+* Atomic Balance Updates: Updates balance atomically using a single SQL query with conditions.
+* REST API Endpoint: A POST endpoint to update user balances.
+* Database Migrations: Managed with Umzug.
+* Testing: Basic tests and load testing with Artillery.
 
 Project Structure
 ```
@@ -55,14 +55,14 @@ The server will start on port 3000 (or the port specified in your environment va
 ### Testing
 
 Unit & Integration Tests
-	•	You can write tests using your preferred framework (Jest, Mocha, etc.).
-	•	Sample tests are provided for the balance update endpoint.
+* You can write tests using your preferred framework (Jest, Mocha, etc.).
+* Sample tests are provided for the balance update endpoint.
 
 ### Load Testing with Artillery
 
 The project includes an Artillery test script to simulate high load.
 
-####How to Run Artillery Tests:
+#### How to Run Artillery Tests:
 1.	Install Artillery (if not already installed):
 ```
 npm install -g artillery
