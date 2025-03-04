@@ -1,7 +1,7 @@
 import { DataTypes, QueryInterface } from 'sequelize'
 
-export const up = async (queryInterface: QueryInterface): Promise<void> => {
-    await queryInterface.createTable('users', {
+export const up = async ({ context }: { context: QueryInterface }): Promise<void> => {
+    await context.createTable('users', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -12,9 +12,9 @@ export const up = async (queryInterface: QueryInterface): Promise<void> => {
             allowNull: false,
         },
     })
-    await queryInterface.bulkInsert('users', [{ balance: 10000 }])
+    await context.bulkInsert('users', [{ balance: 10000 }])
 }
 
-export const down = async (queryInterface: QueryInterface): Promise<void> => {
-    await queryInterface.dropTable('users')
+export const down = async ({ context }: { context: QueryInterface }): Promise<void> => {
+    await context.dropTable('users')
 }
